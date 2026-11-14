@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "burnrate"
+version = "0.1.0"
+description = "Forecast when Claude Code and Codex CLI will hit their 5-hour and weekly usage limits, from your local logs."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Mohammed Al-Saray"}]
+keywords = ["claude", "claude-code", "codex", "usage-limit", "rate-limit", "tokens", "cli"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Environment :: Console",
+]
+
+[project.urls]
+Homepage = "https://github.com/mohammed2345353/burnrate"
+Issues = "https://github.com/mohammed2345353/burnrate/issues"
+
+[project.scripts]
+burnrate = "burnrate.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
